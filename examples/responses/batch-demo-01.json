@@ -1,0 +1,372 @@
+{
+  "batch_id": "demo-01",
+  "summary": {
+    "total": 8,
+    "completed": 7,
+    "failed": 1
+  },
+  "results": [
+    {
+      "document_id": "request-01",
+      "processing_status": "COMPLETED",
+      "extracted": {
+        "benefit": "certification reimbursement",
+        "amount": "18000",
+        "currency": "INR",
+        "reference": "CERT-101"
+      },
+      "field_evidence": {
+        "benefit": [
+          {
+            "quote": "I request certification reimbursement of INR 18000 for a completed cloud certification"
+          }
+        ],
+        "amount": [
+          {
+            "quote": "est certification reimbursement of INR 18000 for a completed cloud certificatio"
+          }
+        ],
+        "currency": [
+          {
+            "quote": "est certification reimbursement of INR 18000 for a completed cloud certificatio"
+          }
+        ],
+        "reference": [
+          {
+            "quote": "Reference: CERT-101"
+          }
+        ]
+      },
+      "policy": {
+        "status": "ANSWERED",
+        "answer": "The annual certification reimbursement limit is INR 25000.",
+        "citations": [
+          {
+            "chunk_id": "atlas-cert-current",
+            "quote": "The annual certification reimbursement limit for employees is INR 25000."
+          }
+        ]
+      },
+      "review_required": {
+        "required": true,
+        "issues": [
+          "LIMITATION: An annual limit does not establish remaining balance, eligibility, or a payable amount; no claims history was supplied."
+        ]
+      },
+      "duplicate_of": null,
+      "error": null
+    },
+    {
+      "document_id": "request-02",
+      "processing_status": "COMPLETED",
+      "extracted": {
+        "benefit": "home-office allowance",
+        "amount": "14000",
+        "currency": "INR",
+        "reference": "HOME-202"
+      },
+      "field_evidence": {
+        "benefit": [
+          {
+            "quote": "I bought a desk and chair for INR 14000"
+          }
+        ],
+        "amount": [
+          {
+            "quote": "-202\nI bought a desk and chair for INR 14000. Please process my home-office all"
+          }
+        ],
+        "currency": [
+          {
+            "quote": "-202\nI bought a desk and chair for INR 14000. Please process my home-office all"
+          }
+        ],
+        "reference": [
+          {
+            "quote": "Reference: HOME-202"
+          }
+        ]
+      },
+      "policy": {
+        "status": "CONFLICT",
+        "answer": null,
+        "citations": [
+          {
+            "chunk_id": "atlas-home-office-a",
+            "quote": "The annual home-office allowance for employees is INR 12000."
+          },
+          {
+            "chunk_id": "atlas-home-office-b",
+            "quote": "The annual home-office allowance for employees is INR 15000."
+          }
+        ]
+      },
+      "review_required": {
+        "required": true,
+        "issues": [
+          "LIMITATION: An annual allowance does not establish remaining balance, eligibility, or a payable amount; no claims history was supplied.",
+          "POLICY_CONFLICT: Applicable approved policy passages disagree; no precedence rule is supplied."
+        ]
+      },
+      "duplicate_of": null,
+      "error": null
+    },
+    {
+      "document_id": "request-03",
+      "processing_status": "COMPLETED",
+      "extracted": {
+        "benefit": "certification reimbursement",
+        "amount": null,
+        "currency": "INR",
+        "reference": "CERT-303"
+      },
+      "field_evidence": {
+        "benefit": [
+          {
+            "quote": "Certification reimbursement request"
+          }
+        ],
+        "amount": [
+          {
+            "quote": "ursement request. The invoice says INR 22000. My reimbursement form says INR 28"
+          },
+          {
+            "quote": "22000. My reimbursement form says INR 28000. Neither amount has been corrected"
+          }
+        ],
+        "currency": [
+          {
+            "quote": "ursement request. The invoice says INR 22000. My reimbursement form says INR 28"
+          },
+          {
+            "quote": "22000. My reimbursement form says INR 28000. Neither amount has been corrected"
+          }
+        ],
+        "reference": [
+          {
+            "quote": "Reference: CERT-303"
+          }
+        ]
+      },
+      "policy": {
+        "status": "ANSWERED",
+        "answer": "The annual certification reimbursement limit is INR 25000.",
+        "citations": [
+          {
+            "chunk_id": "atlas-cert-current",
+            "quote": "The annual certification reimbursement limit for employees is INR 25000."
+          }
+        ]
+      },
+      "review_required": {
+        "required": true,
+        "issues": [
+          "AMOUNT_AMBIGUOUS: Multiple distinct amounts appear (INR 22000; INR 28000); the correct amount needs human confirmation.",
+          "LIMITATION: An annual limit does not establish remaining balance, eligibility, or a payable amount; no claims history was supplied."
+        ]
+      },
+      "duplicate_of": null,
+      "error": null
+    },
+    {
+      "document_id": "request-04",
+      "processing_status": "COMPLETED",
+      "extracted": {
+        "benefit": null,
+        "amount": "6000",
+        "currency": "INR",
+        "reference": "WELL-404"
+      },
+      "field_evidence": {
+        "benefit": [],
+        "amount": [
+          {
+            "quote": "ELL-404\nI request reimbursement of INR 6000 for a gym membership. What wellnes"
+          }
+        ],
+        "currency": [
+          {
+            "quote": "ELL-404\nI request reimbursement of INR 6000 for a gym membership. What wellnes"
+          }
+        ],
+        "reference": [
+          {
+            "quote": "Reference: WELL-404"
+          }
+        ]
+      },
+      "policy": null,
+      "review_required": {
+        "required": true,
+        "issues": [
+          "BENEFIT_UNRESOLVED: The requested benefit could not be identified from the document.",
+          "POLICY_GAP: No applicable policy benefit could be identified in the supplied corpus."
+        ]
+      },
+      "duplicate_of": null,
+      "error": null
+    },
+    {
+      "document_id": "request-05",
+      "processing_status": "COMPLETED",
+      "extracted": {
+        "benefit": "certification reimbursement",
+        "amount": "70000",
+        "currency": "INR",
+        "reference": "CERT-505"
+      },
+      "field_evidence": {
+        "benefit": [
+          {
+            "quote": "Certification reimbursement requested: INR 70000"
+          }
+        ],
+        "amount": [
+          {
+            "quote": "ification reimbursement requested: INR 70000. I belong to Boreal and have emplo"
+          }
+        ],
+        "currency": [
+          {
+            "quote": "ification reimbursement requested: INR 70000. I belong to Boreal and have emplo"
+          }
+        ],
+        "reference": [
+          {
+            "quote": "Reference: CERT-505"
+          }
+        ]
+      },
+      "policy": {
+        "status": "ANSWERED",
+        "answer": "The annual certification reimbursement limit is INR 25000.",
+        "citations": [
+          {
+            "chunk_id": "atlas-cert-current",
+            "quote": "The annual certification reimbursement limit for employees is INR 25000."
+          }
+        ]
+      },
+      "review_required": {
+        "required": true,
+        "issues": [
+          "LIMITATION: An annual limit does not establish remaining balance, eligibility, or a payable amount; no claims history was supplied."
+        ]
+      },
+      "duplicate_of": null,
+      "error": null
+    },
+    {
+      "document_id": "request-06",
+      "processing_status": "COMPLETED",
+      "extracted": {
+        "benefit": "certification reimbursement",
+        "amount": "18000",
+        "currency": "INR",
+        "reference": "CERT-101"
+      },
+      "field_evidence": {
+        "benefit": [
+          {
+            "quote": "I request certification reimbursement of INR 18000 for a completed cloud certification"
+          }
+        ],
+        "amount": [
+          {
+            "quote": "est certification reimbursement of INR 18000 for a completed cloud certificatio"
+          }
+        ],
+        "currency": [
+          {
+            "quote": "est certification reimbursement of INR 18000 for a completed cloud certificatio"
+          }
+        ],
+        "reference": [
+          {
+            "quote": "Reference: CERT-101"
+          }
+        ]
+      },
+      "policy": {
+        "status": "ANSWERED",
+        "answer": "The annual certification reimbursement limit is INR 25000.",
+        "citations": [
+          {
+            "chunk_id": "atlas-cert-current",
+            "quote": "The annual certification reimbursement limit for employees is INR 25000."
+          }
+        ]
+      },
+      "review_required": {
+        "required": true,
+        "issues": [
+          "LIMITATION: An annual limit does not establish remaining balance, eligibility, or a payable amount; no claims history was supplied."
+        ]
+      },
+      "duplicate_of": "request-01",
+      "error": null
+    },
+    {
+      "document_id": "request-07",
+      "processing_status": "COMPLETED",
+      "extracted": {
+        "benefit": "external training",
+        "amount": null,
+        "currency": null,
+        "reference": "TRAIN-707"
+      },
+      "field_evidence": {
+        "benefit": [
+          {
+            "quote": "I have already booked external training and now want reimbursement"
+          }
+        ],
+        "amount": [],
+        "currency": [],
+        "reference": [
+          {
+            "quote": "Reference: TRAIN-707"
+          }
+        ]
+      },
+      "policy": {
+        "status": "ANSWERED",
+        "answer": "Manager approval is required before external training is booked.",
+        "citations": [
+          {
+            "chunk_id": "atlas-training-current",
+            "quote": "Manager approval is required before external training is booked."
+          }
+        ]
+      },
+      "review_required": {
+        "required": true,
+        "issues": [
+          "AMOUNT_MISSING: No stated amount was found.",
+          "POLICY_REVIEW: The policy requires manager approval before external training is booked; the document says approval was not obtained and booking already occurred.",
+          "LIMITATION: The policy does not establish whether this expense is payable."
+        ]
+      },
+      "duplicate_of": null,
+      "error": null
+    },
+    {
+      "document_id": "request-08",
+      "processing_status": "FAILED",
+      "extracted": null,
+      "field_evidence": null,
+      "policy": null,
+      "review_required": {
+        "required": true,
+        "issues": [
+          "PROCESSING_FAILURE: The uploaded file is empty."
+        ]
+      },
+      "duplicate_of": null,
+      "error": {
+        "code": "EMPTY_FILE",
+        "message": "The uploaded file is empty."
+      }
+    }
+  ]
+}

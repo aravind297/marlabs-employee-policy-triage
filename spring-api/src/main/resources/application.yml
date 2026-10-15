@@ -1,0 +1,16 @@
+server:
+  port: 8080
+  error:
+    include-message: never
+spring:
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 30MB
+python-service:
+  base-url: ${PYTHON_SERVICE_URL:http://localhost:8000}
+  connect-timeout-ms: ${PYTHON_CONNECT_TIMEOUT_MS:1000}
+  read-timeout-ms: ${PYTHON_READ_TIMEOUT_MS:5000}
+logging:
+  level:
+    com.marlabs.triage: INFO
